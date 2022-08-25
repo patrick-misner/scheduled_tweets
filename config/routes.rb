@@ -15,6 +15,10 @@ Rails.application.routes.draw do
   patch "password/reset/edit", to: "password_resets#update"
 
   get "/auth/twitter2/callback", to: "omniauth_callbacks#twitter2"
+
+  resources :twitter_accounts
+
+
   root to: "main#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
