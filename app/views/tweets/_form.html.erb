@@ -20,9 +20,11 @@
  </div>
 
 
-<%= form.button "Schedule", class: "btn btn-primary" %>
+<%= form.button "Schedule", data: { turbo: "false" }, class: "btn btn-primary" %>
 
 <% if form.object.persisted? %>
-<%= button_to "Delete", form.object, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-outline btn-danger" %>
+<%= button_to "Delete", form.object, method: :delete, data: { turbo: "false" }, class: "btn btn-outline btn-danger" %>
 <% end %>
+
+
 <% end %>
